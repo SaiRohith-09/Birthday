@@ -73,7 +73,21 @@
     btn.textContent = '🔈'; // reset toggle icon
   });
 
-  // Show popup only on mobile
-  if (window.innerWidth < 768) {
-    document.getElementById('desktopPrompt').style.display = 'block';
+function checkView() {
+    const isMobile = window.innerWidth < 768;
+    const isPortrait = window.innerHeight > window.innerWidth;
+
+    if (isMobile) {
+      document.getElementById('desktopPrompt').style.display = 'block';
+    }
+
+    if (isPortrait) {
+      document.getElementById('rotatePrompt').style.display = 'block';
+    } else {
+      document.getElementById('rotatePrompt').style.display = 'none';
+    }
   }
+
+  window.addEventListener('load', checkView);
+  window.addEventListener('resize', checkView);
+  window.addEventListener('orientationchange', checkView);
