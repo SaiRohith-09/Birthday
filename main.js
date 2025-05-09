@@ -73,3 +73,7 @@
     btn.textContent = '🔈'; // reset toggle icon
   });
 
+  // Show popup only on mobile
+  if (window.innerWidth < 768) {
+    document.getElementById('desktopPrompt').style.display = 'block';
+  }
