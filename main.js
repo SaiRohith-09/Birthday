@@ -72,3 +72,4 @@
     audio.currentTime = 0; // optional: resets audio to start
     btn.textContent = '🔈'; // reset toggle icon
   });
+
