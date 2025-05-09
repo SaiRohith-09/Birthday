@@ -6,8 +6,29 @@
 }
 
 body {
-  background: #E5E5E5;
-  background-image: url("https://photos.google.com/photo/AF1QipNYcNwj59pocxqoUzjzcTNNiOqkzJT4PmVS7YWB");
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.split {
+  position: fixed;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.left {
+  left: 0;
+  background-image: url("left.jpg");
+}
+
+.right {
+  right: 0;
+  background-image: url("right.jpg");
 }
 
 #card-front {
